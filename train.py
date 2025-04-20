@@ -59,15 +59,15 @@ for episode in range(MAX_EPISODES):
         x, y, x_dot, y_dot, angle, angular_vel, leg1, leg2 = next_state
         shaped_reward = original_reward
 
-        shaped_reward += -abs(angle) * 0.3
+        shaped_reward += -abs(angle) * 0.05
 
         target_x = 0
         target_y = 0
         distance_from_target = np.sqrt((x - target_x) ** 2 + (y - target_y) ** 2)
-        shaped_reward += -distance_from_target * 0.5
+        shaped_reward += -distance_from_target * 0.05
 
         if abs(y) < 0.2:
-            shaped_reward += -abs(x_dot) * 0.3
+            shaped_reward += -abs(x_dot) * 0.1
 
         reward = shaped_reward
         done = terminated or truncated
