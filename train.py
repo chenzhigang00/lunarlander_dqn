@@ -7,7 +7,6 @@ import random
 from model import DQN
 from utils import ReplayBuffer, seed_everything
 
-# --- Hyperparameters ---
 BATCH_SIZE = 64
 GAMMA = 0.99
 LR = 1e-3
@@ -15,13 +14,12 @@ BUFFER_SIZE = 100_000
 TARGET_UPDATE_FREQ = 1000
 EPS_START = 1.0
 EPS_END = 0.05
-EPS_DECAY = 100_000  # how many steps to decay epsilon
+EPS_DECAY = 100_000
 MAX_EPISODES = 1000
 MAX_STEPS = 1000
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# --- Initialize ---
 env = gym.make("LunarLander-v3", render_mode=None)  # LunarLander-v3 with Gymnasium
 seed_everything()
 state_dim = env.observation_space.shape[0]
@@ -77,7 +75,6 @@ for episode in range(MAX_EPISODES):
         total_reward += reward
         steps_done += 1
 
-        # Learn from experience
         if len(replay_buffer) >= BATCH_SIZE:
             batch = replay_buffer.sample(BATCH_SIZE)
             states, actions, rewards, next_states, dones = zip(*batch)
