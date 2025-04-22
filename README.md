@@ -1,6 +1,6 @@
 # LunarLander DQN Agent
 
-This project implements a Deep Q-Network (DQN) to train an agent in the `LunarLander-v2` environment from Gymnasium. The goal is to achieve a reward threshold greater than 200 using reward shaping and exploration strategies. Training is optimized to complete in under 2 hours on standard CPU/GPU setups.
+This project implements a Deep Q-Network (DQN) to train an agent in the `LunarLander-v3` environment from Gymnasium. The goal is to achieve a reward threshold greater than 200 using reward shaping and exploration strategies. Training is optimized to complete in under 2 hours on standard CPU/GPU setups.
 
 ## Setup Instructions
 
@@ -37,7 +37,7 @@ python train.py
 ```
 
 The training process will:
-- Train the DQN agent on the LunarLander-v2 environment.
+- Train the DQN agent on the LunarLander-v3 environment.
 - Save rewards per episode to the file rewards.npy.
 - Plot the training performance (reward per episode) once training is complete.
 Training performance is measured as the reward per episode. The goal is to achieve a reward above 200, which indicates successful landing.
@@ -82,7 +82,7 @@ Contains the definition of the Deep Q-Network (DQN) architecture. It is built us
 - Experience Sampling: Samples a batch of experiences for training.
 
 ### 4. run_agent.py
-- Loads the trained model and evaluates it in the LunarLander-v2 environment.
+- Loads the trained model and evaluates it in the LunarLander-v3 environment.
 - Displays the agent’s performance by rendering the environment, if required, as the agent interacts with it.
 
 ## Training Performance Plot
