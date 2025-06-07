@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-rewards = np.load("rewards.npy")
+rewards = np.load("lunarlander_dqn/rewards.npy")
 plt.plot(rewards)
 plt.xlabel("Episode")
 plt.ylabel("Reward")
