@@ -22,7 +22,7 @@ class ReplayBuffer:
         return len(self.buffer)
 
 # Seed setup for reproducibility
-def seed_everything(seed=42):
+def seed_everything(seed=39):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
