@@ -20,7 +20,7 @@ MAX_STEPS = 1000
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-env = gym.make("LunarLander-v3", continuous = False, gravity = -10.0,
+env = gym.make("LunarLander-v3", continuous = False, gravity = -10.0, seed=42,
                enable_wind = False, wind_power=15.0, turbulence_power=1.5, render_mode=None)  # LunarLander-v3 with Gymnasium
 seed_everything()
 state_dim = env.observation_space.shape[0]
