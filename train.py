@@ -108,7 +108,6 @@ for episode in range(MAX_EPISODES):
             loss.backward()
             optimizer.step()   # 更新原始网络（非目标网络）
 
-        # Target network sync
         if steps_done % TARGET_UPDATE_FREQ == 0:
             target_net.load_state_dict(policy_net.state_dict())   # 更新目标网络
 
