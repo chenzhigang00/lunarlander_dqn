@@ -15,7 +15,7 @@ TARGET_UPDATE_FREQ = 1000
 EPS_START = 1.0
 EPS_END = 0.05
 EPS_DECAY = 100_000
-MAX_EPISODES = 3000
+MAX_EPISODES = 1500
 MAX_STEPS = 1000
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
