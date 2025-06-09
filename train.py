@@ -120,6 +120,6 @@ for episode in range(MAX_EPISODES):
         avg = np.mean(episode_rewards[-10:])
         print(f"Episode {episode}, Avg Reward: {avg:.2f}")
 
-torch.save(policy_net.state_dict(), "dqn_lander.pth")
+torch.save(policy_net.state_dict(), "dqn_lander_2.pth")
 
-np.save("rewards.npy", episode_rewards)
+np.save("rewards_2.npy", episode_rewards)
